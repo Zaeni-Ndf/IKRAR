@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>IKRAR</title>
+
+  <link rel="icon" href="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" type="image/png">
+
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <style>
+    @keyframes gantiWarna {
+     0%   { background-color: #0000A5; }
+     20%  { background-color: #040720; }
+     40%  { background-color: #98AFC7; }
+     60%  { background-color: #2F539B; }
+     80%  { background-color: #0000A0; }
+     100% { background-color: #14A3C7; }
+   }
+
+   body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    zoom: 75%;
+    animation: gantiWarna 15s infinite;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .floating-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .floating-image {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    animation: floatUp 10s linear infinite;
+    opacity: 0.8;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-10vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="floating-container">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 10%; animation-delay: 0s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 20%; animation-delay: 2s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 30%; animation-delay: 4s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 40%; animation-delay: 6s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 50%; animation-delay: 8s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 60%; animation-delay: 10s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 70%; animation-delay: 12s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 80%; animation-delay: 14s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 90%; animation-delay: 16s;">
+    <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/ikrar.png?raw=true" class="floating-image" style="left: 100%; animation-delay: 18s;">
+  </div>
+
+  <div class="row">
+    <div class="card">
+     <div class="card-body">
+      <div class="col-12 container" style="text-align:center;">
+       <marquee behavior="scroll" direction="left" scrollamount="5" style="font-size: 50px; font-weight: bold;">
+        Laporan Pemasukan Iuran BATIK – Acara Halal Bihalal IRMAS / IKRAR 2026
+      </marquee>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">
+          *) Note: Iuran dapat ditransfer ke rekening 
+          <img src="https://github.com/Zaeni-Ndf/ultah/blob/main/assets_ultah/BCA.png?raw=true" style="width: 55px; vertical-align: middle;" alt="BCA"> 
+          dengan nomor <strong>6241237181</strong> a.n. <strong>Muhamad Zaeni Nadip</strong>
+        </h5>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead style="background-color: darkblue; color:white;">
+            <tr>
+              <th style="text-align: center;">No</th>
+              <th style="text-align: center;">Nama</th>
+              <th style="text-align: center;">April</th>
+              <th style="text-align: center;">Mei</th>
+              <th style="text-align: center;">Juni</th>
+              <th style="text-align: center;">Juli</th>
+              <th style="text-align: center;">Agustus</th>
+              <th style="text-align: center;">September</th>
+              <th style="text-align: center;">Oktober</th>
+              <th style="text-align: center;">November</th>
+              <th style="text-align: center;">Desember</th>
+              <th style="text-align: center;">Total</th>
+              <th style="text-align: center;">Ket.</th>
+            </tr>
+          </thead>
+          <tbody id="dataTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="dataModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <form onsubmit="saveData(event)">
+            <div class="modal-header">
+              <h5 class="modal-title">Tambah / Edit Data</h5>
+              <button type="button" class="close" data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body row g-3">
+              <input type="hidden" id="editIndex">
+              <div class="col-md-6">
+                <label>Nama:</label>
+                <input type="text" class="form-control" id="nameInput" required>
+              </div>
+              <div class="col-md-6"><label>April:</label><input type="number" class="form-control" id="aprilInput"></div>
+              <div class="col-md-6"><label>Mei:</label><input type="number" class="form-control" id="meiInput"></div>
+              <div class="col-md-6"><label>Juni:</label><input type="number" class="form-control" id="juniInput"></div>
+              <div class="col-md-6"><label>Juli:</label><input type="number" class="form-control" id="juliInput"></div>
+              <div class="col-md-6"><label>Agustus:</label><input type="number" class="form-control" id="agustusInput"></div>
+              <div class="col-md-6"><label>September:</label><input type="number" class="form-control" id="septemberInput"></div>
+              <div class="col-md-6"><label>Oktober:</label><input type="number" class="form-control" id="oktoberInput"></div>
+              <div class="col-md-6"><label>November:</label><input type="number" class="form-control" id="novemberInput"></div>
+              <div class="col-md-6"><label>Desember:</label><input type="number" class="form-control" id="desemberInput"></div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal">Batal</button>
+              <button class="btn btn-primary btn-sm" type="submit">Simpan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDNJ1z-CoUkt1RJwUpLiUTPRgTyEeGA_iU",
+    authDomain: "ikrar-70078.firebaseapp.com",
+    projectId: "ikrar-70078",
+    storageBucket: "ikrar-70078.appspot.com",
+    messagingSenderId: "861157322419",
+    appId: "1:861157322419:web:0b27a873252c5ebb8a4ac6",
+    measurementId: "G-GCLHCG2S1B",
+    databaseURL: "https://ikrar-70078-default-rtdb.asia-southeast1.firebasedatabase.app"
+
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+
+  function formatRupiah(value) {
+    return !value || value == 0 ? "" : `${Number(value).toLocaleString("id-ID")}`;
+  }
+
+  function renderTable() {
+    db.ref('iuran').on('value', snapshot => {
+      const table = document.getElementById('dataTable');
+      table.innerHTML = '';
+      const data = snapshot.val();
+      let no = 1;
+
+    // Variabel untuk total per bulan
+      let totalApril = 0, totalMei = 0, totalJuni = 0, totalJuli = 0;
+      let totalAgustus = 0, totalSeptember = 0, totalOktober = 0;
+      let totalNovember = 0, totalDesember = 0, grandTotal = 0;
+
+      for (let id in data) {
+        const d = data[id];
+        const total = (d.april || 0) + (d.mei || 0) + (d.juni || 0) + (d.juli || 0) +
+        (d.agustus || 0) + (d.september || 0) + (d.oktober || 0) +
+        (d.november || 0) + (d.desember || 0);
+
+      // Akumulasi total per bulan
+        totalApril += (d.april || 0);
+        totalMei += (d.mei || 0);
+        totalJuni += (d.juni || 0);
+        totalJuli += (d.juli || 0);
+        totalAgustus += (d.agustus || 0);
+        totalSeptember += (d.september || 0);
+        totalOktober += (d.oktober || 0);
+        totalNovember += (d.november || 0);
+        totalDesember += (d.desember || 0);
+        grandTotal += total;
+        const rowColor = (no % 2 === 0) ? '#77DD77' : '#9ACD32';
+        table.innerHTML += `
+        <tr>
+        <td>${no++}</td>
+        <td style="text-align:left;">${d.name}</td>
+        <td style="text-align:right;">${formatRupiah(d.april)}</td>
+        <td style="text-align:right;">${formatRupiah(d.mei)}</td>
+        <td style="text-align:right;">${formatRupiah(d.juni)}</td>
+        <td style="text-align:right;">${formatRupiah(d.juli)}</td>
+        <td style="text-align:right;">${formatRupiah(d.agustus)}</td>
+        <td style="text-align:right;">${formatRupiah(d.september)}</td>
+        <td style="text-align:right;">${formatRupiah(d.oktober)}</td>
+        <td style="text-align:right;">${formatRupiah(d.november)}</td>
+        <td style="text-align:right;">${formatRupiah(d.desember)}</td>
+       <td style="text-align:right; font-weight:bold; background:${rowColor}">${formatRupiah(total)}</td>
+        <td style="text-align:center;">${total === 300000 ? 'LUNAS' : ''}</td>
+       </tr>
+        `;
+      }
+
+    // Tambahkan baris jumlah di akhir
+      table.innerHTML += `
+      <tr style="font-weight:bold; background:#9ACD32">
+      <td colspan="2" style="text-align:center">Jumlah</td>
+      <td style="text-align:right;">${formatRupiah(totalApril)}</td>
+      <td style="text-align:right;">${formatRupiah(totalMei)}</td>
+      <td style="text-align:right;">${formatRupiah(totalJuni)}</td>
+      <td style="text-align:right;">${formatRupiah(totalJuli)}</td>
+      <td style="text-align:right;">${formatRupiah(totalAgustus)}</td>
+      <td style="text-align:right;">${formatRupiah(totalSeptember)}</td>
+      <td style="text-align:right;">${formatRupiah(totalOktober)}</td>
+      <td style="text-align:right;">${formatRupiah(totalNovember)}</td>
+      <td style="text-align:right;">${formatRupiah(totalDesember)}</td>
+      <td style="text-align:right;">${formatRupiah(grandTotal)}</td>
+      <td style="text-align:right;">Dari 5.400.000</td>
+      </tr>
+      `;
+    });
+  }
+
+  window.onload = renderTable;
+</script>
+</html>
